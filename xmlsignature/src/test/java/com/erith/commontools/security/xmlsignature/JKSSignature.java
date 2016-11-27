@@ -17,7 +17,7 @@ import java.security.spec.X509EncodedKeySpec;
 import org.junit.Test;
 
 public class JKSSignature {
-	
+	// keytool -genkey -alias tomcat -keyalg RSA -keystore keystore.jks
     private static String originalFilepath = "output/jks/originalFile.txt";
     private static String signatureFilepath = "output/jks/sig";
     private static String publicKeyFilepath = "output/jks/suecert";
