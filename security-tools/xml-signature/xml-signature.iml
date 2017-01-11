@@ -13,6 +13,11 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="pgp-algorithm" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk14:1.50" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcpg-jdk14:1.47" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk14:1.47" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcpg-jdk15on:1.47" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.47" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.9" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />

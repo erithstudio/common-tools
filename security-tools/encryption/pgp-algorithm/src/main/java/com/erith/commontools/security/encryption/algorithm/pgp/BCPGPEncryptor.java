@@ -75,9 +75,9 @@ public class BCPGPEncryptor {
     public String getPublicKeyFilePath() {
         return publicKeyFilePath;
     }
-    public void setPublicKeyFilePath(String publicKeyFilePath) throws IOException, PGPException {
+    public void setPublicKeyFilePath(String publicKeyFilePath) throws Exception {
         this.publicKeyFilePath = publicKeyFilePath;
-        publicKey = BCPGPUtils.readPublicKey(publicKeyFilePath);
+        publicKey = BCPGPUtils.readPGPPublicKey(publicKeyFilePath);
     }
 
     public void encryptFile(String inputFileNamePath, String outputFileNamePath)

@@ -19,15 +19,15 @@ public class XmlRoundtripTest {
     @Before
     public void createSignerWithKeyData() throws Exception {
         PrivateKeyData keyData = createKeyData();
-        // this.signer = new XmlSigner(SecurityConstants.TYPE_PKCS12, keyData, null);
-        this.signer = new XmlSigner(SecurityConstants.TYPE_PKCS12_PGP, keyData, getPathToFileOnClasspath("pgp/public.txt16a4b637-5dff-4fed-9d22-10f922109f26"));
+//        this.signer = new XmlSigner(SecurityConstants.TYPE_PKCS12, keyData, null);
+        this.signer = new XmlSigner(SecurityConstants.TYPE_PGP, keyData, getPathToFileOnClasspath("pgp/public.txt16a4b637-5dff-4fed-9d22-10f922109f26"));
     }
 
     @Before
     public void createValidatorWithKeyData() throws Exception {
         PrivateKeyData keyData = createKeyData();
-        // this.validator = new XmlValidator(SecurityConstants.TYPE_PKCS12, keyData, null);
-        this.validator = new XmlValidator(SecurityConstants.TYPE_PKCS12_PGP, keyData, getPathToFileOnClasspath("pgp/public.txt16a4b637-5dff-4fed-9d22-10f922109f26"));
+//        this.validator = new XmlValidator(SecurityConstants.TYPE_PKCS12, keyData, null);
+         this.validator = new XmlValidator(SecurityConstants.TYPE_PGP, keyData, getPathToFileOnClasspath("pgp/public.txt16a4b637-5dff-4fed-9d22-10f922109f26"));
     }
 
     private PrivateKeyData createKeyData() {
@@ -72,7 +72,7 @@ public class XmlRoundtripTest {
     }
 
     private String getPathToOutputFile() throws Exception {
-        // File outputFile = new File("outputFilePkcs12.xml");
+//        File outputFile = new File("outputFilePkcs12.xml");
         File outputFile = new File("outputFilePGP.xml");
         return outputFile.getAbsolutePath();
     }

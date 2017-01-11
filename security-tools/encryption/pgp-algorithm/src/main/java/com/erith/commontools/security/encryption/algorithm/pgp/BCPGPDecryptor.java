@@ -131,7 +131,7 @@ public class BCPGPDecryptor {
                 PGPOnePassSignatureList p1 = (PGPOnePassSignatureList) message;
                 ops = p1.get(0);
                 long keyId = ops.getKeyID();
-                PGPPublicKey signerPublicKey = BCPGPUtils.readPublicKey(signingPublicKeyFilePath, keyId);
+                PGPPublicKey signerPublicKey = BCPGPUtils.readPGPPublicKey(signingPublicKeyFilePath, keyId);
                 ops.initVerify(signerPublicKey, "BC");
             }
             message = pgpFact.nextObject();

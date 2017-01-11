@@ -5,27 +5,41 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.NoSuchProviderException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.security.Security;
+import java.security.cert.X509Certificate;
 import java.util.Iterator;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.bouncycastle.openpgp.PGPException;
-import org.bouncycastle.openpgp.PGPPrivateKey;
-import org.bouncycastle.openpgp.PGPPublicKey;
-import org.bouncycastle.openpgp.PGPPublicKeyRing;
-import org.bouncycastle.openpgp.PGPPublicKeyRingCollection;
-import org.bouncycastle.openpgp.PGPSecretKey;
-import org.bouncycastle.openpgp.PGPSecretKeyRing;
-import org.bouncycastle.openpgp.PGPSecretKeyRingCollection;
-import org.bouncycastle.openpgp.PGPUtil;
+import org.bouncycastle.openpgp.*;
+import org.bouncycastle.openpgp.operator.KeyFingerPrintCalculator;
+import org.bouncycastle.openpgp.operator.bc.BcKeyFingerprintCalculator;
+import org.bouncycastle.openpgp.operator.jcajce.JcaPGPKeyConverter;
 
 public class BCPGPUtils {
 
+    /** Security provider: Bouncy Castle. */
+    public static final String PROVIDER = "BC";
+
+    /** The fingerprint calculator to use whenever it is needed. */
+    static final KeyFingerPrintCalculator FP_CALC = new BcKeyFingerprintCalculator();
+
+    /** Singleton for converting a PGP key to a JCA key. */
+    private static JcaPGPKeyConverter sKeyConverter;
+
     static {
         Security.addProvider(new BouncyCastleProvider());
+
+        if (sKeyConverter == null)
+            sKeyConverter = new JcaPGPKeyConverter().setProvider(BCPGPUtils.PROVIDER);
     }
 
-    public static PGPPublicKey readPublicKey(String publicKeyFilePath) throws IOException, PGPException {
+    public static PublicKey readPublicKey(String publicKeyFilePath) throws Exception {
+        return readPGPPublicKey(publicKeyFilePath).getKey(PROVIDER);
+    }
+
+    public static PGPPublicKey readPGPPublicKey(String publicKeyFilePath) throws Exception {
 
         InputStream in = new FileInputStream(new File(publicKeyFilePath));
 
@@ -55,7 +69,7 @@ public class BCPGPUtils {
         return key;
     }
 
-    public static PGPPublicKey readPublicKey(String publicKeyFilePath, long keyId) throws IOException, PGPException {
+    public static PGPPublicKey readPGPPublicKey(String publicKeyFilePath, long keyId) throws IOException, PGPException {
 
         InputStream in = new FileInputStream(new File(publicKeyFilePath));
 
@@ -101,6 +115,20 @@ public class BCPGPUtils {
         return pgpSecKey.extractPrivateKey(pass, "BC");
     }
 
+    public static PrivateKey findPrivateKey(String signingPrivateKeyFilePath, char[] signingPrivateKeyPassword) throws Exception {
+        InputStream keyInputStream = new FileInputStream(new File(signingPrivateKeyFilePath));
+        PGPSecretKey secretKey = BCPGPUtils.findSecretKey(keyInputStream);
+        PGPPrivateKey privateKey = secretKey.extractPrivateKey(signingPrivateKeyPassword, PROVIDER);
+        return privateKey.getKey();
+    }
+
+    public static X509Certificate createPrivateKeyToX509(String signingPrivateKeyFilePath, char[] signingPrivateKeyPassword) throws Exception {
+        InputStream keyInputStream = new FileInputStream(new File(signingPrivateKeyFilePath));
+        PGPSecretKey secretKey = BCPGPUtils.findSecretKey(keyInputStream);
+        PGPPrivateKey privateKey = secretKey.extractPrivateKey(signingPrivateKeyPassword, "BC");
+        return PgpToX509.createSelfSignedCert(secretKey, privateKey, null);
+    }
+
     public static PGPSecretKey findSecretKey(InputStream in) throws IOException, PGPException {
         in = PGPUtil.getDecoderStream(in);
         PGPSecretKeyRingCollection pgpSec = new PGPSecretKeyRingCollection(in);
@@ -134,5 +162,30 @@ public class BCPGPUtils {
                     "Can't find signing key in key ring.");
         }
         return key;
+    }
+
+    static PrivateKey convertPrivateKey(PGPPrivateKey key) throws PGPException {
+        return sKeyConverter.getPrivateKey(key);
+    }
+
+    static PublicKey convertPublicKey(PGPPublicKey key) throws PGPException {
+        return sKeyConverter.getPublicKey(key);
+    }
+
+    private static int getKeyFlags(PGPPublicKey key) {
+        @SuppressWarnings("unchecked")
+        Iterator<PGPSignature> sigs = key.getSignatures();
+        while (sigs.hasNext()) {
+            PGPSignature sig = sigs.next();
+            PGPSignatureSubpacketVector subpackets = sig.getHashedSubPackets();
+            if (subpackets != null)
+                return subpackets.getKeyFlags();
+        }
+        return 0;
+    }
+
+    static boolean isSigningKey(PGPPublicKey key) {
+        int keyFlags = getKeyFlags(key);
+        return (keyFlags & PGPKeyFlags.CAN_SIGN) == PGPKeyFlags.CAN_SIGN;
     }
 }

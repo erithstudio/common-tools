@@ -31,6 +31,7 @@ import javax.xml.transform.TransformerException;
 
 //import com.erith.commontools.security.xmlsignature.algorithm.PgpKeyProvider;
 import com.erith.commontools.security.xmlsignature.algorithm.Pkcs12KeyProvider;
+import com.erith.commontools.security.xmlsignature.algorithm.PgpKeyProvider;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -42,9 +43,9 @@ public class XmlSigner extends DomValidationOperator {
     public XmlSigner(int type, PrivateKeyData keyData, String publicKeyFilepath) throws Exception {
     	if(type == SecurityConstants.TYPE_PKCS12) {
     		this.provider = new Pkcs12KeyProvider(factory, keyData);
-    	} /*else if(type == SecurityConstants.TYPE_PKCS12_PGP) {
+    	} else if(type == SecurityConstants.TYPE_PGP) {
     		this.provider = new PgpKeyProvider(factory, keyData, publicKeyFilepath);
-    	} */else {
+    	} else {
     		throw new Exception("No Encryption Type");
     	}
     }
