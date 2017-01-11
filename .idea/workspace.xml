@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c488cbb4-f405-4081-adcd-be4ab708c27d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpg_jdk14_1_47.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/PgpToX509.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcpg_jdk15_140.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcprov_jdk15_140.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/security-tools/xml-signature/outputFile.xml" afterPath="" />
+    <list default="true" id="c488cbb4-f405-4081-adcd-be4ab708c27d" name="Default" comment="Fix bugs xml signature for pgp encryption">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pgp-algorithm.iml" afterPath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pgp-algorithm.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pom.xml" afterPath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPDecryptor.java" afterPath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPDecryptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPEncryptor.java" afterPath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPEncryptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPUtils.java" afterPath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/outputFilePGP.xml" afterPath="$PROJECT_DIR$/security-tools/xml-signature/outputFilePGP.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/outputFilePkcs12.xml" afterPath="$PROJECT_DIR$/security-tools/xml-signature/outputFilePkcs12.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/pom.xml" afterPath="$PROJECT_DIR$/security-tools/xml-signature/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/SecurityConstants.java" afterPath="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/SecurityConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlSigner.java" afterPath="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlSigner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlValidator.java" afterPath="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlValidator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/PgpKeyProvider.java" afterPath="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/PgpKeyProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/src/test/java/com/erith/commontools/security/xmlsignature/XmlRoundtripTest.java" afterPath="$PROJECT_DIR$/security-tools/xml-signature/src/test/java/com/erith/commontools/security/xmlsignature/XmlRoundtripTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/src/test/resources/unsignedFile.xml" afterPath="$PROJECT_DIR$/security-tools/xml-signature/src/test/resources/unsignedFile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/security-tools/xml-signature/xml-signature.iml" afterPath="$PROJECT_DIR$/security-tools/xml-signature/xml-signature.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/xmlsignature/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,11 +30,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="XmlRoundtripTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/test/java/com/erith/commontools/security/xmlsignature/XmlRoundtripTest.java">
+      <file leaf-file-name="PgpKeyProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/PgpKeyProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1950#1964#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BCPGPUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,11 +55,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unsignedFile.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/test/resources/unsignedFile.xml">
+      <file leaf-file-name="XmlRoundtripTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/test/java/com/erith/commontools/security/xmlsignature/XmlRoundtripTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xml-signature.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/xml-signature.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XmlSigner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlSigner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="35" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BCPGPEncryptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPEncryptor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -151,16 +199,16 @@
         <option value="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/test/java/com/erith/commontools/security/xmlsignature/algorithm/pgp/SingleSignOnTest.java" />
         <option value="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/PgpToX509.java" />
         <option value="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPEncryptor.java" />
-        <option value="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPUtils.java" />
         <option value="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/Pkcs12KeyProvider.java" />
-        <option value="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/PgpKeyProvider.java" />
-        <option value="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pom.xml" />
-        <option value="$PROJECT_DIR$/security-tools/xml-signature/pom.xml" />
         <option value="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/SecurityConstants.java" />
-        <option value="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlSigner.java" />
         <option value="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlValidator.java" />
         <option value="$PROJECT_DIR$/security-tools/xml-signature/src/test/resources/unsignedFile.xml" />
+        <option value="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pom.xml" />
         <option value="$PROJECT_DIR$/security-tools/xml-signature/src/test/java/com/erith/commontools/security/xmlsignature/XmlRoundtripTest.java" />
+        <option value="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPUtils.java" />
+        <option value="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlSigner.java" />
+        <option value="$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/PgpKeyProvider.java" />
+        <option value="$PROJECT_DIR$/security-tools/xml-signature/pom.xml" />
       </list>
     </option>
   </component>
@@ -194,7 +242,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -224,7 +272,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="security-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="security-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml-signature" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="security-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encryption" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="security-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encryption" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pgp-algorithm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,32 +446,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BCPGPTest.decryptSignedFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.erith.commontools.security.xmlsignature.algorithm.pgp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="xml-signature" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.erith.commontools.security.xmlsignature.algorithm.pgp" />
-      <option name="MAIN_CLASS_NAME" value="com.erith.commontools.security.xmlsignature.algorithm.pgp.BCPGPTest" />
-      <option name="METHOD_NAME" value="decryptSignedFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="BCPGPTest.encryptFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -382,6 +486,32 @@
       <option name="MAIN_CLASS_NAME" value="com.erith.commontools.security.xmlsignature.XmlRoundtripTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="XmlRoundtripTest.canValidateAFileItSignedItself" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.erith.commontools.security.xmlsignature.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="xml-signature" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.erith.commontools.security.xmlsignature" />
+      <option name="MAIN_CLASS_NAME" value="com.erith.commontools.security.xmlsignature.XmlRoundtripTest" />
+      <option name="METHOD_NAME" value="canValidateAFileItSignedItself" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -777,17 +907,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.BCPGPTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BCPGPTest.decryptSignedFile1" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BCPGPTest.decryptSignedFile" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BCPGPTest.encryptFile" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.XmlRoundtripTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BCPGPTest.encryptFile" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.XmlRoundtripTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.XmlRoundtripTest.canValidateAFileItSignedItself" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.XmlRoundtripTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BCPGPTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BCPGPTest.encryptFile" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BCPGPTest.decryptSignedFile1" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BCPGPTest.decryptSignedFile" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.XmlRoundtripTest.canValidateAFileItSignedItself" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BCPGPTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BCPGPTest.encryptFile" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BCPGPTest.decryptSignedFile1" />
       </list>
     </recent_temporary>
   </component>
@@ -815,7 +945,7 @@
       <workItem from="1484104120498" duration="1825000" />
       <workItem from="1484106211174" duration="4873000" />
       <workItem from="1484112070412" duration="1854000" />
-      <workItem from="1484115075329" duration="5997000" />
+      <workItem from="1484115075329" duration="7163000" />
     </task>
     <task id="LOCAL-00001" summary="Remove Compiler Error">
       <created>1484112454828</created>
@@ -824,46 +954,53 @@
       <option name="project" value="LOCAL" />
       <updated>1484112454828</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix bugs xml signature for pgp encryption">
+      <created>1484121116649</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1484121116649</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 33m 08s.xml">
+    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 53m 33s.xml">
       <configuration name="XmlRoundtripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 34m 56s.xml">
+    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 57m 14s.xml">
       <configuration name="XmlRoundtripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 35m 45s.xml">
+    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 59m 17s.xml">
       <configuration name="XmlRoundtripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 37m 45s.xml">
+    <history-entry file="XmlRoundtripTest - 2017.01.11 at 15h 00m 44s.xml">
       <configuration name="XmlRoundtripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 38m 36s.xml">
+    <history-entry file="XmlRoundtripTest - 2017.01.11 at 15h 03m 17s.xml">
       <configuration name="XmlRoundtripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 41m 54s.xml">
+    <history-entry file="XmlRoundtripTest - 2017.01.11 at 15h 07m 51s.xml">
       <configuration name="XmlRoundtripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 43m 24s.xml">
+    <history-entry file="XmlRoundtripTest - 2017.01.11 at 15h 08m 00s.xml">
       <configuration name="XmlRoundtripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 48m 57s.xml">
+    <history-entry file="XmlRoundtripTest - 2017.01.11 at 15h 10m 15s.xml">
       <configuration name="XmlRoundtripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 49m 36s.xml">
-      <configuration name="XmlRoundtripTest" configurationId="JUnit" />
+    <history-entry file="XmlRoundtripTest_canValidateAFileItSignedItself - 2017.01.11 at 15h 02m 40s.xml">
+      <configuration name="XmlRoundtripTest.canValidateAFileItSignedItself" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="XmlRoundtripTest - 2017.01.11 at 14h 51m 05s.xml">
-      <configuration name="XmlRoundtripTest" configurationId="JUnit" />
+    <history-entry file="XmlRoundtripTest_canValidateAFileItSignedItself - 2017.01.11 at 15h 09m 34s.xml">
+      <configuration name="XmlRoundtripTest.canValidateAFileItSignedItself" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27997000" />
+    <option name="totallyTimeSpent" value="29163000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -881,7 +1018,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24203338" sideWeight="0.5585831" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24130106" sideWeight="0.5585831" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -944,7 +1081,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove Compiler Error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Compiler Error" />
+    <MESSAGE value="Fix bugs xml signature for pgp encryption" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs xml signature for pgp encryption" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -957,15 +1095,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xmlsignature/pgp/test.txt.enc" />
-    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/pgp/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xmlsignature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/pgp/PGPUtils.java" />
     <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/.project">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -983,27 +1112,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/security-tools/encryption/encryption (1) (com.erith.commontools.security).iml" />
-    <entry file="file://$PROJECT_DIR$/pgpencryption.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-tools.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/encryption.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/security-tools/security-tools.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1042,14 +1150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2089">
           <caret line="299" column="5" lean-forward="true" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,14 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPEncryptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="111" column="16" lean-forward="true" selection-start-line="111" selection-start-column="16" selection-end-line="113" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/Pkcs12KeyProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -1157,46 +1249,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="41" column="21" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="41" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/SecurityConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/PgpKeyProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="34" column="67" lean-forward="false" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1570#1584#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1278,24 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/xml-signature.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlSigner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/test/resources/unsignedFile.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1304,13 +1343,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/test/java/com/erith/commontools/security/xmlsignature/XmlRoundtripTest.java">
+    <entry file="file://$PROJECT_DIR$/common-tools.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encryption.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pgpencryption.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPEncryptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/javax/xml/crypto/dsig/keyinfo/KeyInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="80" column="17" lean-forward="false" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/javax/xml/crypto/dsig/keyinfo/KeyInfoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="106" column="22" lean-forward="false" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/javax/xml/crypto/dsig/XMLSignatureFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="150" column="22" lean-forward="false" selection-start-line="150" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/XmlSigner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="35" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/main/java/com/erith/commontools/security/xmlsignature/algorithm/PgpKeyProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1950#1964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/src/main/java/com/erith/commontools/security/encryption/algorithm/pgp/BCPGPUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/src/test/java/com/erith/commontools/security/xmlsignature/XmlRoundtripTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/xml-signature.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security-tools/xml-signature/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

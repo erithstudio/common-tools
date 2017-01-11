@@ -1,20 +1,30 @@
 package com.erith.commontools.security.xmlsignature.algorithm;
 
 import java.io.*;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
+import java.security.SecureRandom;
+import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import javax.crypto.SecretKey;
 import javax.xml.crypto.dsig.XMLSignatureFactory;
 import javax.xml.crypto.dsig.keyinfo.KeyInfo;
 import javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 import javax.xml.crypto.dsig.keyinfo.X509Data;
 
 import com.erith.commontools.security.encryption.algorithm.pgp.BCPGPUtils;
+import com.erith.commontools.security.encryption.algorithm.pgp.PgpToX509;
 import com.erith.commontools.security.xmlsignature.PrivateKeyData;
 import com.erith.commontools.security.xmlsignature.PrivateKeyProvider;
+
 
 import static java.util.Collections.singletonList;
 
