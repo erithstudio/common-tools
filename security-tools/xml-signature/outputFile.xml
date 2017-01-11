@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xml><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>ytIINryy7/oD1gNnDBD0GAEHifo=</DigestValue></Reference></SignedInfo><SignatureValue>UWWRd17EUAu8UQz7zg3O7IKhB01UWi1APw9g18UOZFq8vth++E/F9zbADF0ne7xcwh4XFEn6Dsr4
+TG2/gO/rshfOwN/t/axiWju6qCQdlb0Cg7ykLCQ5SCYyupHxVt+3ZcXwz8Ryn6OBDX5kVOEtsNnW
+KOsuzZ7OFXCOehd8UUJJ+JowkeOMx/tbuhBqaldXzwb5roezF4P5aEEb9f7e2o6kjz0jMw9+MFuT
+T5b95b2/ZGyetwf2HLCiw3RvpXkxiwvYLZUkO2F0c0NOzt4aMatwgQcXxABPzPOGZIuuIBDyjn0I
+YkQwGBj0vQZmiR1W6Ya+ZJnOtI7ZiRRq5AOJSA==</SignatureValue></Signature></xml>
