@@ -12,7 +12,7 @@ import javax.xml.crypto.dsig.XMLSignatureException;
 import javax.xml.crypto.dsig.dom.DOMValidateContext;
 import javax.xml.parsers.ParserConfigurationException;
 
-import com.erith.commontools.security.xmlsignature.algorithm.pgp.PgpKeyProvider;
+//import com.erith.commontools.security.xmlsignature.algorithm.PgpKeyProvider;
 import com.erith.commontools.security.xmlsignature.algorithm.Pkcs12KeyProvider;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -26,9 +26,9 @@ public class XmlValidator extends DomValidationOperator {
     public XmlValidator(int type, PrivateKeyData keyData, String publicKeyFilepath) throws Exception {
     	if(type == SecurityConstants.TYPE_PKCS12) {
     		keyProvider = new Pkcs12KeyProvider(factory, keyData);
-    	} else if(type == SecurityConstants.TYPE_PKCS12_PGP) {
+    	}/* else if(type == SecurityConstants.TYPE_PKCS12_PGP) {
     		keyProvider = new PgpKeyProvider(factory, keyData, publicKeyFilepath);
-    	} else {
+    	} */else {
     		throw new Exception("No Encryption Type");
     	}
     }

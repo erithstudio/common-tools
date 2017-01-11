@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/security-tools/encryption/encryption.iml" filepath="$PROJECT_DIR$/security-tools/encryption/encryption.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pgp-algorithm.iml" filepath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pgp-algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pgp-encryption.iml" filepath="$PROJECT_DIR$/security-tools/encryption/pgp-algorithm/pgp-encryption.iml" />
       <module fileurl="file://$PROJECT_DIR$/pgpencryption.iml" filepath="$PROJECT_DIR$/pgpencryption.iml" />
       <module fileurl="file://$PROJECT_DIR$/security-tools/security-tools.iml" filepath="$PROJECT_DIR$/security-tools/security-tools.iml" />
